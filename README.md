@@ -14,7 +14,7 @@ The application features a modern dark-themed aesthetic with glassmorphism effec
 ---
 
 ## 🔗 Live Demo
-**[CLICK HERE TO VIEW LIVE PROJECT](https://your-project-link-here.netlify.app)**  
+**[CLICK HERE TO VIEW LIVE PROJECT](https://novastack-tech.vercel.app/)**  
 
 
 ---
