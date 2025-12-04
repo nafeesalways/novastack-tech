@@ -11,7 +11,7 @@ const Button = ({
   children,
   to,                 // If provided, renders as a Link
   onClick,            // Click handler for button mode
-  variant = 'primary', // primary, secondary, outline, ghost, danger, white
+  variant = 'primary', // primary, secondary, outline, outline-white, glass, ghost, danger, white
   size = 'md',        // sm, md, lg, xl
   className = '',     // Additional custom classes
   isLoading = false,  // Shows spinner if true
@@ -30,17 +30,24 @@ const Button = ({
     active:scale-[0.98]
   `;
 
-  // 2. Color Variants: standardized to Indigo (matching Navbar) to ensure consistency
+  // 2. Color Variants
   const variants = {
-    primary: "bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500 shadow-sm hover:shadow-md",
-    secondary: "bg-slate-800 text-white hover:bg-slate-900 focus:ring-slate-500 shadow-sm hover:shadow-md",
+    // Standard Colors
+    primary: "bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500 shadow-sm hover:shadow-md border border-transparent",
+    secondary: "bg-slate-800 text-white hover:bg-slate-900 focus:ring-slate-500 shadow-sm hover:shadow-md border border-transparent",
+    
+    // Light Background Options
     outline: "border-2 border-indigo-600 text-indigo-600 bg-transparent hover:bg-indigo-50 focus:ring-indigo-500",
-    ghost: "text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500",
-    danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm",
-    white: "bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 focus:ring-gray-200 shadow-sm"
+    ghost: "text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 bg-transparent",
+    danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm border border-transparent",
+    white: "bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 focus:ring-gray-200 shadow-sm",
+
+    // Dark Background / Hero Options (New)
+    "outline-white": "border-2 border-white text-white bg-transparent hover:bg-white/10 focus:ring-white",
+    glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 focus:ring-indigo-500 shadow-lg",
   };
 
-  // 3. Size Variants: Padding and text size adjustments
+  // 3. Size Variants
   const sizes = {
     sm: "px-3 py-1.5 text-sm rounded-md",
     md: "px-5 py-2.5 text-sm rounded-lg",
@@ -52,7 +59,7 @@ const Button = ({
   const widthClass = fullWidth ? 'w-full' : '';
   const loadingClass = isLoading ? 'cursor-wait opacity-80' : '';
 
-  // Combine all classes into a single string
+  // Combine all classes
   const classes = `
     ${baseStyle}
     ${variants[variant] || variants.primary}
@@ -62,7 +69,7 @@ const Button = ({
     ${className}
   `.replace(/\s+/g, ' ').trim();
 
-  // Helper to render content (Icon + Text + Spinner)
+  // Content Helper
   const renderContent = () => (
     <>
       {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -72,7 +79,7 @@ const Button = ({
     </>
   );
 
-  // Render as React Router Link if 'to' prop is present
+  // Render as React Router Link
   if (to && !disabled && !isLoading) {
     return (
       <Link to={to} className={classes}>
@@ -81,7 +88,7 @@ const Button = ({
     );
   }
 
-  // Otherwise, render as a standard HTML Button
+  // Render as Button
   return (
     <button
       type={type}
