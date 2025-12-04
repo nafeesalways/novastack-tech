@@ -4,11 +4,11 @@ import { ArrowRight, Play, Zap, Code } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-purple-900/80 to-indigo-900 text-white py-20 lg:py-32 overflow-hidden">
+    <section className="relative bg-linear-to-br from-slate-900 via-purple-900/80 to-indigo-900 text-white py-20 lg:py-32 overflow-hidden">
       {/* Background Animated Blobs */}
       <div aria-hidden="true" className="absolute inset-0">
-        <div className="absolute top-[-20rem] right-[-20rem] w-96 h-96 rounded-full bg-purple-700 opacity-40 mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute bottom-[-20rem] left-[-20rem] w-96 h-96 rounded-full bg-indigo-600 opacity-30 mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-80 -right-80 w-96 h-96 rounded-full bg-purple-700 opacity-40 mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-80 -left-80 w-96 h-96 rounded-full bg-indigo-600 opacity-30 mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -18,9 +18,9 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white via-indigo-100 to-purple-100 bg-clip-text text-transparent drop-shadow-2xl mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight bg-linear-to-r from-white via-indigo-100 to-purple-100 bg-clip-text text-transparent drop-shadow-2xl mb-6">
           Building the <br />
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
+          <span className="bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
             Digital Future
           </span>
         </h1>
