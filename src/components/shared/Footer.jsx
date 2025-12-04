@@ -83,7 +83,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/about"
                   className="hover:text-indigo-400 transition-colors"
                 >
                   Careers
