@@ -76,8 +76,48 @@ const Home = () => {
         </div>
       </section>
 
+            {/* 3. Testimonials Section */}
+      <section className="py-20 bg-slate-900 text-white mb-7">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* Testimonial 1 */}
+            <div className="bg-slate-800 p-8 rounded-2xl relative">
+              <p className="text-lg text-gray-300 italic mb-6">
+                "NovaStack transformed our outdated platform into a modern, high-speed application. Their attention to detail is unmatched."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center font-bold text-white">JD</div>
+                <div>
+                  <h4 className="font-semibold">John Doe</h4>
+                  <p className="text-sm text-gray-400">CEO, TechStream</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-slate-800 p-8 rounded-2xl relative">
+              <p className="text-lg text-gray-300 italic mb-6">
+                "Professional, timely, and technically brilliant. The team went above and beyond to meet our tight deadline."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white">AS</div>
+                <div>
+                  <h4 className="font-semibold">Sarah Amin</h4>
+                  <p className="text-sm text-gray-400">CTO, CreativeHub</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
       {/* 3. Creative Stats Section (New Addition) */}
-      <section className="py-16 bg-indigo-600 text-white">
+      <section className="py-16 bg-indigo-600 text-white mb-5">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
            {[
              { label: "Projects Done", value: "120+" },
