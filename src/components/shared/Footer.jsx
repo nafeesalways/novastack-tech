@@ -134,7 +134,7 @@ const Footer = () => {
                 ) : status === 'success' ? (
                   <><Check className="w-4 h-4 mr-2" /> Subscribed!</>
                 ) : (
-                  <><Send className="w-4 h-4 mr-2" /> Subscribe</>
+                  <> Subscribe</>
                 )}
               </Button>
             </form>
